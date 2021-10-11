@@ -1,4 +1,76 @@
 # 손상배 201840119
+
+## [10월 06일]
+> **학습내용**
+
+### > npm install axios
+
+  axios 설치
+
+브라우저 주소창에 [**yts.ls**](http://yts.ls) 라고 입력 영화 데이터 api 사이트 접속
+
+api 를 사용하려면 axios 를 import 한 다음 , componentDidMount()함수에서
+
+axios로 api를 호출
+
+```jsx
+import axios from "axios"
+
+componentDidMount(){
+	//영화 데이터 로딩
+	axios.get('https://yts.mx/api/v2/list_movies.json')}
+```
+
+시간이 필요하다는 것을 알리기 위해서는 async, await 키워드가 필요
+
+자바스크립트에게 시간이 필요하다는 것을 알리려면 async 를 ()앞에 붙이고,
+
+실제 시간이 필요한 대상인 axios.get() 함수에는 await를 붙인다
+
+```jsx
+getMovies = async() => {
+	const movies = await axios.get('https://yts.mx/api/v2/list_movies.json')
+}
+
+componentDidMount() {
+	this.getMovies()
+}
+```
+
+### > npm install axios
+
+  axios 설치
+
+브라우저 주소창에 [**yts.ls**](http://yts.ls) 라고 입력 영화 데이터 api 사이트 접속
+
+api 를 사용하려면 axios 를 import 한 다음 , componentDidMount()함수에서
+
+axios로 api를 호출
+
+```jsx
+import axios from "axios"
+
+componentDidMount(){
+	//영화 데이터 로딩
+	axios.get('https://yts.mx/api/v2/list_movies.json')}
+```
+
+시간이 필요하다는 것을 알리기 위해서는 async, await 키워드가 필요
+
+자바스크립트에게 시간이 필요하다는 것을 알리려면 async 를 ()앞에 붙이고,
+
+실제 시간이 필요한 대상인 axios.get() 함수에는 await를 붙인다
+
+```jsx
+getMovies = async() => {
+	const movies = await axios.get('https://yts.mx/api/v2/list_movies.json')
+}
+
+componentDidMount() {
+	this.getMovies()
+}
+```
+
 ## [9월 29일]
 > **학습내용**
 ## 상대경로 이미지 삽입 방법
