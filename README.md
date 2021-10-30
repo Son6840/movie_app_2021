@@ -1,5 +1,68 @@
 # 손상배 201840119
 
+## [10월 27일]
+> **학습내용**
+
+**메뉴를 클릭하면 화면이 이동해야 하는데, 이때 필요한 것이 라우터이다.**
+
+**라우터는 react-router-dom패키지를 이용하면 된다**
+
+```jsx
+npm install react-router-dom
+```
+
+**라우터는 사용자가 입력한 URL을 통해 특정 컴포넌트를 불러준다
+ex) localhost:3000/about
+
+React-router-dom은 여러 종류의 라우터를 제공하는데, 여기서는 HashRouter와 Route컴포넌트를 사용한다.
+App.js에 HashRouter와 Route 컴포넌트 import하고 적용한다**
+
+```jsx
+import './App.css'
+import {HashRouter, Route} from 'react-router-dom'
+import Home from './routes/Home'
+import About from './routes/About'
+
+funtion App(){
+ return(
+	<HashRouter>
+			<Route path='/' component={Home} />
+			<Route path='/about' component={About} />
+	</HashRouter>
+	)
+}
+
+export default App
+```
+
+```jsx
+<HashRouter>
+			<Route path='/home'>
+				<h1>Home</h1>
+			</Route>
+				/*localhost:3000/#/home -> Home 출력*/
+
+			<Route path='/home/instroduction'>
+				<h1>instroduction</h1>
+			</Route>
+			/*localhost:3000/#/home/instroduction -> instroduction출력*/
+
+			<Route path='/about'>
+				<h1>about</h1>
+			</Route>
+		/*localhost:3000/#/about -> about출력*/
+
+	</HashRouter>
+```
+
+
+
+
+
+
+
+
+
 ## [10월 06일]
 > **학습내용**
 
